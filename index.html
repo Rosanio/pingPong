@@ -10,25 +10,38 @@
     <script src="js/bootstrap.min.js"></script>
     <script src ="js/scripts.js"></script>
   </head>
-  <body class="container">
-    <h1>Ping-Pong</h1>
-    <h3>Let's Play!</h3>
-    <h5><strong>Rules:</strong></h5>
-    <p>Ping-Pong will count up to your number from 1 with the following exceptions:</p>
-    <ol>
-      <li>Numbers divisible by 3 become "ping"</li>
-      <li>Numbers divisible by 5 become "pong"</li>
-      <li>Numbers divisible by 3 and 5 become "pingpong"</li>
-    </ol>
-    <form id="pingpong">
-      <div class="form-group">
-        <label for="numInput">Enter your number here:</label>
-        <input type="text" class="form-control" id="numInput">
-      </div>
-      <button type="submit" class="btn btn-default">Ping Pong!</button>
-    </form>
-    <ul id="result">
+  <body>
+    <div id="header">
+      <h1><strong>Ping-Pong</strong></h1>
+    </div>
+    <div id="sidebar">
+      <h3>About Ping-Pong</h3>
+      <p class="whitecolor"><strong>Created by:</strong></p>
+      <p>Matt Rosanio</p>
+      <p class="whitecolor"><strong>Github username/URL</strong></p>
+      <a href="https://github.com/Rosanio">Rosanio</a>
+      <p class="whitecolor"><strong>Level 1 Test For:</strong></p>
+      <p>Behavior Driven Development</p>
+    </div>
+    <div class="container">
+      <h3 id="play">Let's Play!</h3>
+      <h5 id="rules"><strong>Rules:</strong></h5>
+      <p>Ping-Pong will count up to your number from 1 with the following exceptions:</p>
+      <ol>
+        <li>Numbers divisible by 3 become "ping"</li>
+        <li>Numbers divisible by 5 become "pong"</li>
+        <li>Numbers divisible by 3 and 5 become "pingpong"</li>
+      </ol>
+      <form id="pingpong">
+        <div class="form-group">
+          <label for="numInput">Enter your number here:</label>
+          <input type="text" class="form-control" id="numInput">
+        </div>
+        <button type="submit" class="btn btn-default">Ping Pong!</button>
+      </form>
+      <ul id="result">
 
-    </ul>
+      </ul>
+    </div>
   </body>
 </html>

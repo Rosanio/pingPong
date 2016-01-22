@@ -11,4 +11,7 @@ describe("pingPong", function() {
   it('will return false if user enters something which is NaN',function() {
     expect(pingPong('apple')).to.equal(false);
   });
+  it("will return an array which counts down if a negative number is entered",function() {
+    expect(pingPong(-6)).to.eql([-1,-2,'ping',-4,'pong','ping']);
+  });
 });

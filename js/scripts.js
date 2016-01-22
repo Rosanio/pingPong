@@ -106,21 +106,39 @@ function pingPong(countTo) {
     }
   }
   strikes = 0;
-  for(var i = 1; i <= countTo; i++) {
-    var output = "";
-    if (i%3 === 0) {
-      output += 'ping';
+  if (countTo >= 0) {
+    for(var i = 1; i <= countTo; i++) {
+      var output = "";
+      if (i%3 === 0) {
+        output += 'ping';
+      }
+      if (i%5 === 0) {
+        output += 'pong';
+      }
+      if (output.length > 0) {
+        numberArray.push(output);
+      } else {
+        numberArray.push(i);
+      }
     }
-    if (i%5 === 0) {
-      output += 'pong';
+    return numberArray;
+  } else {
+    for(var i = -1; i >= countTo; i--) {
+      var output = "";
+      if (i%3 === 0) {
+        output += 'ping';
+      }
+      if (i%5 === 0) {
+        output += 'pong';
+      }
+      if (output.length > 0) {
+        numberArray.push(output);
+      } else {
+        numberArray.push(i);
+      }
     }
-    if (output.length > 0) {
-      numberArray.push(output);
-    } else {
-      numberArray.push(i);
-    }
+    return numberArray;
   }
-  return numberArray;
 }
 
 $(function() {
