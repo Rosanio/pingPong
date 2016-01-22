@@ -1,5 +1,12 @@
+var strikes = 0;
+
 function pingPong(countTo) {
   var numberArray = [];
+  if(isNaN(countTo)) {
+    alert('Please enter a number');
+    strikes += 1;
+    return false
+  }
   for(var i = 1; i <= countTo; i++) {
     var output = "";
     if (i%3 === 0) {
