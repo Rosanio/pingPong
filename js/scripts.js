@@ -28,3 +28,17 @@ function createNumberArray(countTo) {
   }
   return numberArray;
 }
+
+$(function() {
+  $('form#pingpong').submit(function(event) {
+    var userInput = $('input#numInput').val();
+    var pingPongArray = pingPong(userInput);
+
+    $('#result').empty();
+    for(var i = 0; i < pingPongArray.length; i++) {
+      $('#result').append('<li>' + pingPongArray[i] + '</li>');
+    }
+
+    event.preventDefault();
+  });
+});
