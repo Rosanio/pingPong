@@ -6,6 +6,11 @@ function pingPong(countTo) {
       var secondPart = numberArray.slice((i+1), numberArray.length);
       firstPart.push('ping');
       numberArray = firstPart.concat(secondPart);
+    } else if (numberArray[i]%5 === 0) {
+      var firstPart = numberArray.slice(0, i);
+      var secondPart = numberArray.slice((i+1), numberArray.length);
+      firstPart.push('pong');
+      numberArray = firstPart.concat(secondPart);
     }
   }
   return numberArray;

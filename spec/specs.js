@@ -8,4 +8,7 @@ describe("pingPong", function() {
   it('will replace any number which is divisible by three with the word "ping".', function() {
     expect(pingPong(4)).to.eql([1,2,'ping',4]);
   });
+  it('will replace any number which is divisible by five with the word "pong"', function() {
+    expect(pingPong(10)).to.eql([1,2,'ping',4,'pong','ping',7,8,'ping','pong']);
+  });
 });
