@@ -1,7 +1,20 @@
-function createNumberArray(countTo) {
-  var array = [];
-  for(var i = 1; i <= countTo; i++) {
-    array.push(i);
+function pingPong(countTo) {
+  var numberArray = createNumberArray(countTo);
+  for (var i = 0; i < numberArray.length; i++) {
+    if(numberArray[i]%3 === 0) {
+      var firstPart = numberArray.slice(0, i);
+      var secondPart = numberArray.slice((i+1), numberArray.length);
+      firstPart.push('ping');
+      numberArray = firstPart.concat(secondPart);
+    }
   }
-  return array;
+  return numberArray;
+}
+
+function createNumberArray(countTo) {
+  var numberArray = [];
+  for(var i = 1; i <= countTo; i++) {
+    numberArray.push(i);
+  }
+  return numberArray;
 }
